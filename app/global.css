@@ -1,0 +1,439 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+    /* Layout Utilities */
+    .flex-center {
+        @apply flex items-center justify-center;
+    }
+
+    .flex-between {
+        @apply flex items-center justify-between;
+    }
+
+    .flex-start {
+        @apply flex items-start justify-center;
+    }
+
+    .flex-end {
+        @apply flex items-end justify-center;
+    }
+
+    .flex-around {
+        @apply flex items-center justify-around;
+    }
+
+    .flex-evenly {
+        @apply flex items-center justify-evenly;
+    }
+
+    /* Typography Utilities */
+    .text-display-lg {
+        @apply text-6xl font-bold tracking-tight;
+    }
+
+    .text-display-md {
+        @apply text-5xl font-bold tracking-tight;
+    }
+
+    .text-heading-xl {
+        @apply text-3xl font-semibold tracking-tight;
+    }
+
+    .text-heading-lg {
+        @apply text-2xl font-semibold tracking-tight;
+    }
+
+    .text-heading-md {
+        @apply text-xl font-semibold tracking-tight;
+    }
+
+    .text-heading-sm {
+        @apply text-lg font-semibold tracking-tight;
+    }
+
+    .text-body-lg {
+        @apply text-lg leading-relaxed;
+    }
+
+    .text-body-md {
+        @apply text-base leading-relaxed;
+    }
+
+    .text-body-sm {
+        @apply text-sm leading-relaxed;
+    }
+
+    .text-caption {
+        @apply text-xs text-gray-500 leading-tight;
+    }
+
+    .text-overline {
+        @apply text-xs uppercase tracking-wider font-semibold;
+    }
+
+    /* Color Utilities */
+    .text-primary {
+        @apply text-blue-600;
+    }
+
+    .bg-primary {
+        @apply bg-blue-600;
+    }
+
+    .border-primary {
+        @apply border-blue-600;
+    }
+
+    .text-success {
+        @apply text-green-500;
+    }
+
+    .bg-success {
+        @apply bg-green-500;
+    }
+
+    .border-success {
+        @apply border-green-500;
+    }
+
+    .text-danger {
+        @apply text-red-500;
+    }
+
+    .bg-danger {
+        @apply bg-red-500;
+    }
+
+    .border-danger {
+        @apply border-red-500;
+    }
+
+    .text-gold {
+        @apply text-yellow-400;
+    }
+
+    .bg-gold {
+        @apply bg-yellow-400;
+    }
+
+    .border-gold {
+        @apply border-yellow-400;
+    }
+
+    .text-heading {
+        @apply text-gray-900;
+    }
+
+    .text-body {
+        @apply text-gray-700;
+    }
+
+    .text-muted {
+        @apply text-gray-500;
+    }
+
+    .bg-surface {
+        @apply bg-gray-50;
+    }
+
+    .bg-card {
+        @apply bg-white;
+    }
+
+    .border-light {
+        @apply border-gray-200;
+    }
+
+    .border-divider {
+        @apply border-gray-300;
+    }
+
+    /* Safe Area Utilities */
+    .safe-area-top {
+        @apply pt-12;
+    }
+
+    .safe-area-bottom {
+        @apply pb-8;
+    }
+
+    .safe-area-left {
+        @apply pl-4;
+    }
+
+    .safe-area-right {
+        @apply pr-4;
+    }
+
+    /* Touch Target Minimum */
+    .touch-target {
+        @apply min-h-11 min-w-11;
+    }
+}
+
+@layer components {
+
+    /* Card Components */
+    .card {
+        @apply bg-white rounded-2xl shadow-sm p-4 mb-3;
+    }
+
+    .card-hover {
+        @apply active:opacity-90;
+    }
+
+    .card-header {
+        @apply border-b border-gray-200 pb-3 mb-3;
+    }
+
+    .card-footer {
+        @apply border-t border-gray-200 pt-3 mt-3;
+    }
+
+    /* Button Components */
+    .btn {
+        @apply flex-center rounded-xl font-medium text-base px-6 py-3 min-h-11 active:opacity-90;
+    }
+
+    .btn-primary {
+        @apply bg-blue-600 text-white;
+    }
+
+    .btn-success {
+        @apply bg-green-500 text-white;
+    }
+
+    .btn-danger {
+        @apply bg-red-500 text-white;
+    }
+
+    .btn-secondary {
+        @apply bg-gray-200 text-gray-900;
+    }
+
+    .btn-outline {
+        @apply bg-transparent border border-blue-600 text-blue-600;
+    }
+
+    .btn-ghost {
+        @apply bg-transparent text-blue-600;
+    }
+
+    .btn-sm {
+        @apply px-4 py-2 text-sm min-h-9;
+    }
+
+    .btn-lg {
+        @apply px-8 py-4 text-lg min-h-12;
+    }
+
+    .btn-full {
+        @apply w-full;
+    }
+
+    /* Badge Components */
+    .badge {
+        @apply flex-center text-xs font-medium px-3 py-1 rounded-full;
+    }
+
+    .badge-success {
+        @apply bg-green-100 text-green-800;
+    }
+
+    .badge-danger {
+        @apply bg-red-100 text-red-800;
+    }
+
+    .badge-warning {
+        @apply bg-yellow-100 text-yellow-800;
+    }
+
+    .badge-primary {
+        @apply bg-blue-100 text-blue-800;
+    }
+
+    .badge-neutral {
+        @apply bg-gray-100 text-gray-700;
+    }
+
+    /* Input Components */
+    .input {
+        @apply w-full rounded-xl border border-gray-200 px-4 py-3 text-base bg-white min-h-11;
+    }
+
+    .input-error {
+        @apply border-red-500;
+    }
+
+    /* Alert Components */
+    .alert {
+        @apply p-4 rounded-xl border mb-4 text-sm;
+    }
+
+    .alert-success {
+        @apply bg-green-50 text-green-800 border-green-200;
+    }
+
+    .alert-danger {
+        @apply bg-red-50 text-red-800 border-red-200;
+    }
+
+    .alert-warning {
+        @apply bg-yellow-50 text-yellow-800 border-yellow-200;
+    }
+
+    .alert-info {
+        @apply bg-blue-50 text-blue-800 border-blue-200;
+    }
+
+    /* Notification Dot */
+    .notification-dot {
+        @apply w-2 h-2 bg-red-500 rounded-full absolute -top-1 -right-1;
+    }
+
+    .notification-dot-large {
+        @apply w-5 h-5 bg-red-500 rounded-full absolute -top-2 -right-2 flex-center text-xs text-white font-semibold;
+    }
+
+    /* App-specific Components */
+    .cart-btn {
+        @apply flex-center w-10 h-10 rounded-full bg-gray-100;
+    }
+
+    .cart-badge {
+        @apply absolute -top-2 -right-1 flex-center w-5 h-5 bg-blue-600 rounded-full;
+    }
+
+    .cart-item {
+        @apply flex flex-row items-end justify-between mb-4 bg-white rounded-xl p-3 shadow-sm;
+    }
+
+    .cart-item__image {
+        @apply w-24 h-24 bg-blue-50 rounded-lg flex-center;
+    }
+
+    .cart-item__actions {
+        @apply flex flex-row items-center justify-center w-5 h-5 bg-blue-50 rounded-md;
+    }
+
+    .custom-btn {
+        @apply bg-blue-600 rounded-full p-3 w-full flex flex-row justify-center;
+    }
+
+    .custom-header {
+        @apply w-full flex flex-row items-center justify-between mb-10;
+    }
+
+    .label {
+        @apply text-base text-left w-full font-medium text-gray-500 pl-2;
+    }
+
+    .filter {
+        @apply px-6 py-3 rounded-full mr-2 shadow-sm bg-white;
+    }
+
+    .menu-card {
+        @apply relative py-9 px-3.5 pt-24 flex-center bg-white shadow-md rounded-3xl;
+    }
+
+    .profile-field {
+        @apply flex flex-row items-center justify-start mb-4;
+    }
+
+    .profile-field__icon {
+        @apply w-12 h-12 rounded-full bg-blue-50 flex-center mr-3;
+    }
+
+    .searchbar {
+        @apply relative flex flex-row items-center justify-center w-full bg-white shadow-md rounded-full font-medium text-gray-900 gap-5;
+    }
+
+    .tab-icon {
+        @apply flex min-w-20 items-center justify-center min-h-full gap-1 mt-12;
+    }
+
+    .offer-card {
+        @apply w-full h-48 my-3 rounded-xl overflow-hidden shadow-lg flex items-center gap-5;
+    }
+
+    .offer-card__info {
+        @apply flex-1 h-full flex flex-col justify-center items-start gap-4;
+    }
+
+    .profile-avatar {
+        @apply relative w-28 h-28 border-white border-2 rounded-full;
+    }
+
+    .profile-edit {
+        @apply flex-center absolute bottom-2 right-0 bg-blue-600 border-2 border-white w-7 h-7 p-2 rounded-full;
+    }
+
+    /* Typography Components */
+    .h1-bold {
+        @apply text-3xl font-bold;
+    }
+
+    .h3-bold {
+        @apply text-xl font-bold;
+    }
+
+    .base-bold {
+        @apply text-lg font-bold;
+    }
+
+    .base-semibold {
+        @apply text-lg font-semibold;
+    }
+
+    .base-regular {
+        @apply text-lg font-normal;
+    }
+
+    .paragraph-bold {
+        @apply text-base font-bold;
+    }
+
+    .paragraph-semibold {
+        @apply text-base font-semibold;
+    }
+
+    .paragraph-medium {
+        @apply text-base font-medium;
+    }
+
+    .body-medium {
+        @apply text-sm font-medium;
+    }
+
+    .body-regular {
+        @apply text-sm font-normal;
+    }
+
+    .small-bold {
+        @apply text-xs font-bold;
+    }
+
+    /* Progress Bar */
+    .progress {
+        @apply w-full h-1.5 bg-gray-200 rounded-full overflow-hidden;
+    }
+
+    .progress-bar {
+        @apply h-full bg-blue-600 rounded-full;
+    }
+
+    .progress-bar-success {
+        @apply bg-green-500;
+    }
+
+    .progress-bar-danger {
+        @apply bg-red-500;
+    }
+
+    .progress-bar-warning {
+        @apply bg-yellow-400;
+    }
+}
